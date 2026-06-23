@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Clean Consulting | Cleaning & Laundry Industry Experts</title>
+    <style>
+        :root {
+            --primary: #0b2545; 
+            --secondary: #00b4d8; 
+            --dark: #1d2d44;
+            --light: #f4f7f6;
+            --whatsapp: #25d366; 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { color: var(--dark); line-height: 1.6; background-color: #ffffff; }
+        
+        header { background: #ffffff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        .logo-text { font-size: 18px; font-weight: 800; color: var(--primary); letter-spacing: 0.5px; }
+        .logo-text span { color: var(--secondary); display: block; font-size: 11px; font-weight: 600; letter-spacing: 1px; margin-top: 2px; }
+        
+        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; }
+        nav a:hover { color: var(--secondary); }
+
+        .hero { background: linear-gradient(135deg, rgba(11, 37, 69, 0.95) 0%, rgba(29, 45, 68, 0.9) 100%); color: #ffffff; padding: 100px 5%; text-align: center; }
+        .hero h1 { font-size: 38px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 18px; max-width: 750px; margin: 0 auto 35px; opacity: 0.95; }
+        .cta-btn { background-color: var(--secondary); color: white; padding: 14px 35px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; }
+
+        section { padding: 70px 5%; }
+        .section-title { font-size: 28px; text-align: center; margin-bottom: 15px; color: var(--primary); font-weight: 700; }
+        .section-subtitle { text-align: center; max-width: 700px; margin: 10px auto 50px; color: #62758f; font-size: 15px; }
+        .container { max-width: 1140px; margin: 0 auto; }
+
+        .about-box { max-width: 850px; margin: 0 auto; text-align: center; font-size: 17px; color: #4a5568; }
+        .about-box p { margin-bottom: 20px; }
+
+        .services-bg { background-color: var(--light); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); display: flex; align-items: center; border-left: 4px solid var(--secondary); }
+        .service-item p { font-weight: 600; color: var(--primary); font-size: 14px; text-align: left; }
+
+        .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .how-card { background: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .how-card h3 { color: var(--primary); margin-bottom: 12px; font-size: 18px; }
+        .how-card p { font-size: 15px; color: #4a5568; }
+
+        .why-bg { background: var(--primary); color: white; text-align: center; }
+        .why-bg .section-title { color: white; }
+        .why-box { max-width: 800px; margin: 0 auto; font-size: 17px; opacity: 0.95; }
+        .why-box p { margin-bottom: 20px; }
+
+        .contact-section { text-align: center; background: var(--light); border-radius: 12px; padding: 40px 20px; }
+        .email-btn { display: inline-block; margin-top: 15px; color: var(--primary); font-weight: 700; text-decoration: none; font-size: 22px; border-bottom: 3px solid var(--secondary); padding-bottom: 3px; margin-bottom: 25px; }
+        
+        .whatsapp-contact-btn { display: inline-block; background-color: var(--whatsapp); color: white; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 16px; }
+
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #fff; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
+        .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+
+        footer { background: #07172e; color: #a0aec0; text-align: center; padding: 25px; font-size: 14px; margin-top: 40px; }
+        
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 8px; }
+            .hero h1 { font-size: 28px; }
+            .services-grid, .how-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me." class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.447 5.41 1.448 5.4 0 9.79-4.387 9.793-9.775 0-2.611-1.015-5.066-2.859-6.91-1.845-1.845-4.296-2.86-6.905-2.86-5.4 0-9.792 4.386-9.795 9.775-.001 2.107.545 3.654 1.56 5.3l-.993 3.624 3.792-.992zM17.43 15.63c-.328-.164-1.94-.957-2.242-1.068-.302-.11-.522-.164-.742.164-.22.328-.85 1.068-1.041 1.287-.192.219-.384.246-.712.081-1.095-.548-1.815-.973-2.527-2.2-1.88-3.238.312-3.131 1.055-4.63.11-.219.055-.411-.028-.575-.082-.164-.742-1.78-.1016-2.59-.265-.636-.543-.545-.742-.545-.192 0-.411-.027-.631-.027-.22 0-.576.082-.878.411-.302.328-1.152 1.123-1.152 2.738 0 1.614 1.179 3.174 1.344 3.393.164.22 2.313 3.53 5.603 4.954.783.339 1.393.541 1.872.693.788.251 1.505.215 2.071.13.632-.094 1.94-.793 2.214-1.56.274-.766.274-1.423.192-1.56-.082-.136-.301-.218-.629-.382z"/></svg>
+    </a>
+
+    <header>
+        <a href="#" class="logo-container">
+            <div class="logo-text">CRYSTAL CLEAN<span>CONSULTING</span></div>
+        </a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">What We Do</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Transforming Cleaning Services Into Professional Brands</h1>
+        <p>We provide professional consulting, training, and operational systems for startups and established cleaning operations across Nigeria and beyond.</p>
+        <a href="#contact" class="cta-btn">Get Expert Consultation</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="section-subtitle">Raising standards through operational excellence and professional training.</div>
+        <div class="about-box">
+            <p>At <strong>Crystal Clean Consulting</strong>, we are committed to raising the standard of cleaning and laundry services across Nigeria and beyond. We provide professional consulting, training, and operational solutions for businesses and individuals in the cleaning industry.</p>
+            <p>With practical industry experience and a passion for excellence, we help startups, existing businesses, and organizations build efficient, profitable, and sustainable cleaning operations. Our goal is to transform ordinary cleaning services into professional brands that customers can trust.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-bg">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="section-subtitle">Comprehensive corporate systems and technical capabilities customized for growth.</div>
+            <div class="services-grid">
+                <div class="service-item"><p>Laundry & Dry Cleaning Business Setup</p></div>
+                <div class="service-item"><p>Professional Laundry & Dry Cleaning Training</p></div>
+                <div class="service-item"><p>Stain Removal & Fabric Care Training</p></div>
+                <div class="service-item"><p>Post-Construction Cleaning Solutions</p></div>
+                <div class="service-item"><p>Commercial & Residential Cleaning Consultancy</p></div>
+                <div class="service-item"><p>Upholstery, Carpet & Mattress Cleaning Training</p></div>
+                <div class="service-item"><p>Shoe & Leather Care Training</p></div>
+                <div class="service-item"><p>Cleaning SOP Development</p></div>
+                <div class="service-item"><p>Staff Recruitment & Operational Training</p></div>
+                <div class="service-item"><p>Business Process Optimization</p></div>
+                <div class="service-item"><p>Equipment Selection & Facility Planning</p></div>
+                <div class="service-item"><p>Quality Control Systems</p></div>
+                <div class="service-item"><p>Business Growth & Brand Development</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="container">
+        <h2 class="section-title">How We Do It</h2>
+        <div class="section-subtitle">Combining rigorous industry best practices with hands-on technical experience.</div>
+        <div class="how-grid">
+            <div class="how-card">
+                <h3>1. Discovery & Diagnosis</h3>
+                <p>We begin by thoroughly understanding your business goals, current operations, and specific pain points or challenges.</p>
+            </div>
+            <div class="how-card">
+                <h3>2. Custom Strategies</h3>
+                <p>We build tailor-made Standard Operating Procedures (SOPs), business infrastructure plans, and chemical/equipment selections unique to your scale.</p>
+            </div>
